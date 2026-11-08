@@ -213,7 +213,7 @@
         gap: 14px;
         margin: 48px 0 45px;
         padding: 17px;
-        background: #e6e7dc;
+        background: #F2E8DA;
       }
       .contact-intro {
         width: 46%;
@@ -221,9 +221,22 @@
       .contact-intro h2 {
         margin: 0 0 11px;
       }
+      .contact-intro h2,
+      .contact-intro p {
+        color: #30483D;
+}
+      
       .contact-form {
         width: 54%;
       }
+
+    .contact-form label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 5px;
+        color: #30483D;
+        font-weight: bold;
+}
       input,
       textarea {
         display: block;
@@ -233,7 +246,7 @@
         width: 100%;
         font: inherit;
         padding: 8px;
-        margin: 3px 0 6px;
+        margin: 3px 0 10px;
       }
       textarea {
         height: 54px;
@@ -241,8 +254,9 @@
       }
       .send {
         padding: 9px 12px;
-        background: #b8c3bf;
-        color: #f3f4f2;
+        background: #30483D;
+        color:  #FFFFFF;
+        width: 100%;
       }
       footer {
         background: #e5dfd6;
@@ -333,13 +347,18 @@
           </p>
         </div>
         <form class="contact-form">
+          <label for="nome">Nome</label>
           <input type="text" name="nome" placeholder="Nome" />
+          
+          <label for="email">Email</label>
           <input type="email" name="email" placeholder="Email" />
+          
+          <label for="mensagem">Mensagem</label>
           <textarea
             name="mensagem"
             placeholder="Escreva a sua mensagem"
           ></textarea>
-          <button class="send" type="button">Enviar</button>
+          <button class="send" type="button">Enviar mensagem</button>
         </form>
       </section>
     </main>
