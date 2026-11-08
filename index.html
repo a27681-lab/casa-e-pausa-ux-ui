@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa &amp; Pausa | Loja</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f5f4f0;
+        color: #9c9790;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:focus,
+      button:focus,
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      .container {
+        width: 1060px;
+        margin: 0 auto;
+      }
+      .topbar {
+        background: #d8e0e4;
+        border-bottom: 1px solid #bac6cb;
+      }
+      .topbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      .logo {
+        font-size: 15px;
+        font-weight: normal;
+        color: #76848a;
+      }
+      nav {
+        display: flex;
+        gap: 4px;
+      }
+      nav a {
+        font-size: 13px;
+        color: #7f8b92;
+        padding: 4px 7px;
+      }
+      nav a:nth-child(2) {
+        background: #eee9d9;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 28px 0 10px;
+      }
+      .hero-content {
+        width: 600px;
+      }
+      .overline {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 10px;
+        color: #b5a99f;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #aca49d;
+        margin: 4px 0 8px;
+      }
+      .hero p {
+        max-width: 480px;
+        margin: 7px 0 10px;
+      }
+      .hero-link {
+        display: inline-block;
+        background: #e5e3e0;
+        color: #a39f9a;
+        padding: 6px 10px;
+        margin-top: 6px;
+      }
+      .promo {
+        background: #cf6835;
+        color: white;
+        width: 340px;
+        min-height: 146px;
+        text-align: center;
+        padding: 19px 10px;
+        box-shadow: 0 4px 12px #0000002c;
+      }
+      .promo strong {
+        display: block;
+        font-size: 34px;
+        text-transform: uppercase;
+      }
+      .promo span {
+        font-size: 15px;
+        display: block;
+        margin-top: 8px;
+      }
+      h2 {
+        font-size: 17px;
+        font-weight: 400;
+        color: #96928a;
+      }
+      .products-section {
+        margin-top: 24px;
+      }
+      .section-intro {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+      .section-intro a {
+        text-decoration: underline;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+        margin-top: 13px;
+        align-items: start;
+      }
+      .product {
+        background: #fffcf8;
+        border: 1px solid #d9d3cb;
+        min-height: 350px;
+      }
+      .product:nth-child(1) {
+        padding: 22px;
+        background: #fffcf8;
+      }
+      .product:nth-child(2) {
+        padding: 8px;
+        margin-top: 18px;
+        background: #e9eff1;
+      }
+      .product:nth-child(3) {
+        padding: 13px;
+        margin-top: 5px;
+        background: #f8ebe5;
+      }
+      .product img {
+        display: block;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+      }
+      .product:nth-child(2) img {
+        height: 145px;
+      }
+      .product:nth-child(3) img {
+        height: 190px;
+      }
+      .product h3 {
+        font-size: 13px;
+        font-weight: 500;
+        color: #a09b95;
+        margin: 14px 0 3px;
+      }
+      .product:nth-child(2) h3 {
+        font-size: 17px;
+      }
+      .product .description {
+        min-height: 40px;
+      }
+      .price {
+        color: #8b7e72;
+        font-size: 14px;
+        margin: 8px 0;
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 7px;
+      }
+      button {
+        cursor: pointer;
+        font: inherit;
+        border: none;
+      }
+      .buy {
+        padding: 6px 8px;
+        color: #a59d94;
+        background: #eee9e1;
+      }
+      .details {
+        padding: 14px 19px;
+        background: #7667b0;
+        color: white;
+        font-weight: bold;
+      }
+      .contact {
+        display: flex;
+        gap: 14px;
+        margin: 48px 0 45px;
+        padding: 17px;
+        background: #e6e7dc;
+      }
+      .contact-intro {
+        width: 46%;
+      }
+      .contact-intro h2 {
+        margin: 0 0 11px;
+      }
+      .contact-form {
+        width: 54%;
+      }
+      input,
+      textarea {
+        display: block;
+        border: 1px solid #d8cfc4;
+        background: #f6f0e9;
+        color: #73675e;
+        width: 100%;
+        font: inherit;
+        padding: 8px;
+        margin: 3px 0 6px;
+      }
+      textarea {
+        height: 54px;
+        resize: vertical;
+      }
+      .send {
+        padding: 9px 12px;
+        background: #b8c3bf;
+        color: #f3f4f2;
+      }
+      footer {
+        background: #e5dfd6;
+        color: #998c80;
+        padding: 22px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="logo">Casa &amp; Pausa</div>
+        <nav>
+          <a href="#inicio">Início</a>
+          <a href="#produtos">Coisas</a>
+          <a href="#contacto">Mais</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="inicio">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="overline">Coleção de outono</div>
+          <h1>Objetos para os pequenos momentos</h1>
+          <p>
+            Descubra acessórios simples para criar uma casa mais acolhedora.
+            Pequenos detalhes para o dia a dia.
+          </p>
+          <a href="#produtos" class="hero-link">Ver novidades</a>
+        </div>
+        <aside class="promo">
+          <strong>Portes grátis!</strong>
+          <span>Em encomendas superiores a 50 €</span>
+        </aside>
+      </section>
+
+      <section class="products-section" id="produtos">
+        <div class="section-intro">
+          <h2>Os nossos produtos</h2>
+          <a href="#contacto">Clique aqui</a>
+        </div>
+        <div class="products">
+          <article class="product">
+            <img src="imagens/caneca.svg" alt="" />
+            <h3>Caneca de cerâmica</h3>
+            <p class="description">
+              Uma caneca de tom natural para o café da manhã.
+            </p>
+            <p class="price">12,50 €</p>
+            <div class="actions">
+              <button class="buy" type="button">Adicionar</button>
+              <button class="details" type="button">Saber mais</button>
+            </div>
+          </article>
+          <article class="product">
+            <img src="imagens/caderno.svg" alt="Produto" />
+            <h3>Caderno de notas</h3>
+            <p class="description">
+              Um espaço para apontar ideias e organizar o dia.
+            </p>
+            <p class="price">8,90 €</p>
+            <div class="actions">
+              <button class="buy" type="button">Adicionar</button>
+              <button class="details" type="button">Saber mais</button>
+            </div>
+          </article>
+          <article class="product">
+            <img src="imagens/vela.svg" alt="Vela decorativa" />
+            <h3>Vela perfumada</h3>
+            <p class="description">
+              Um toque acolhedor para momentos de descanso.
+            </p>
+            <p class="price">15,00 €</p>
+            <div class="actions">
+              <button class="buy" type="button">Adicionar</button>
+              <button class="details" type="button">Saber mais</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="contact-intro">
+          <h2>Precisa de ajuda?</h2>
+          <p>
+            Tem alguma dúvida sobre os nossos produtos? Envie uma mensagem
+            através do formulário.
+          </p>
+        </div>
+        <form class="contact-form">
+          <input type="text" name="nome" placeholder="Nome" />
+          <input type="email" name="email" placeholder="Email" />
+          <textarea
+            name="mensagem"
+            placeholder="Escreva a sua mensagem"
+          ></textarea>
+          <button class="send" type="button">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        Casa &amp; Pausa - Pequenos detalhes para o dia a dia.
+      </div>
+    </footer>
+  </body>
+</html>

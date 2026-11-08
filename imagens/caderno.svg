@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="490" viewBox="0 0 700 490">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d9dfcc"/><stop offset="1" stop-color="#bec8b5"/></linearGradient></defs>
+<rect width="700" height="490" fill="url(#bg)"/><path d="M0 385H700V490H0" fill="#b3bea9"/><ellipse cx="342" cy="405" rx="215" ry="28" fill="#646f5a" opacity=".16"/>
+<g transform="translate(160 54) rotate(-6 175 192)"><rect x="37" y="34" width="340" height="352" rx="10" fill="#a2a88f" opacity=".55"/><rect x="22" y="22" width="340" height="352" rx="8" fill="#f1e7d5" stroke="#7c8870" stroke-width="7"/><rect x="22" y="22" width="33" height="352" fill="#a9b49a"/><path d="M101 117H284M101 147H256M101 233H289M101 263H272" stroke="#c4baa7" stroke-width="6"/><circle cx="188" cy="189" r="29" fill="#aab69a"/><path d="M188 166Q174 193 188 210Q205 182 188 166M165 187Q184 178 208 190" fill="none" stroke="#faf5e8" stroke-width="4"/></g>
+<path d="M485 75L559 335L541 343L468 83Z" fill="#6b755b"/><path d="M541 343L557 363L559 335Z" fill="#d6b696"/>
+</svg>
